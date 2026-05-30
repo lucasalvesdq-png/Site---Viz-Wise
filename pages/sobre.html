@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre | Viz Wise</title>
+  <meta name="description" content="Conheça a Viz Wise — tecnologia com DNA cartorário há mais de 15 anos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="navigate('home')" style="cursor:pointer;">
+        <div class="logo-text"><img src="../images/logo.png" alt="logo_vizwise"></div>
+      </div>
+      <div class="nav-links">
+        <span class="nav-link" onclick="navigate('home')" data-page="home">Home</span>
+        <span class="nav-link active" onclick="navigate('sobre')" data-page="sobre">Sobre</span>
+        <span class="nav-link" onclick="navigate('sistemas')" data-page="sistemas">Sistemas</span>
+        <span class="nav-link" onclick="navigate('como-funciona')" data-page="como-funciona">Como Funciona</span>
+        <span class="nav-link" onclick="navigate('servicos')" data-page="servicos">Serviços</span>
+        <span class="nav-link" onclick="navigate('contato')" data-page="contato">Contato</span>
+      </div>
+      <div class="nav-cta">
+        <button class="btn btn-ghost" onclick="navigate('contato')">Fale conosco</button>
+        <button class="btn btn-gold" onclick="navigate('contato')">Solicitar demo</button>
+      </div>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <span class="nav-link" onclick="navigate('home');toggleMenu()">Home</span>
+    <span class="nav-link" onclick="navigate('sobre');toggleMenu()">Sobre</span>
+    <span class="nav-link" onclick="navigate('sistemas');toggleMenu()">Sistemas</span>
+    <span class="nav-link" onclick="navigate('como-funciona');toggleMenu()">Como Funciona</span>
+    <span class="nav-link" onclick="navigate('servicos');toggleMenu()">servicos</span>
+    <span class="nav-link" onclick="navigate('contato');toggleMenu()">Contato</span>
+    <div style="margin-top:24px;display:flex;flex-direction:column;gap:12px;">
+      <button class="btn btn-ghost" onclick="navigate('contato');toggleMenu()">Falar com consultor</button>
+      <button class="btn btn-gold" onclick="navigate('contato');toggleMenu()">Solicitar demo</button>
+    </div>
+  </div>
+
+  <section style="padding:140px 32px 100px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="about-grid">
+        <div class="about-content">
+          <div class="section-label">Quem somos</div>
+          <h1 class="section-title">Tecnologia com DNA cartorário</h1>
+          <p class="about-lead">A Viz Wise nasceu da fusão entre expertise jurídica e engenharia de software — fundada
+            por profissionais que viveram a rotina cartorária e entenderam que o mercado merecia uma solução à altura.
+          </p>
+          <p class="about-body">Há mais de 15 anos desenvolvemos soluções exclusivamente para serventias extrajudiciais.
+            Não somos uma empresa de software que resolveu adaptar um sistema qualquer — somos especialistas em
+            cartórios que constroem tecnologia própria e direcionada.<br><br>Nossa equipe une o conhecimento técnico da
+            atividade notarial e registral à alta performance no desenvolvimento. Essa combinação nos permite criar
+            sistemas que respeitam a complexidade jurídica e garantem total agilidade operacional para a sua equipe.</p>
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+              <div class="value-title">Conformidade</div>
+              <div class="value-desc">Sistemas em constante atualização para garantir o rigor jurídico e a excelência
+                operacional da sua serventia.</div>
+            </div>
+            <div class="value-card">
+              <div class="value-icon"><i class="fa-solid fa-lock"></i></div>
+              <div class="value-title">Segurança</div>
+              <div class="value-desc">Dados protegidos com criptografia de ponta e infraestrutura robusta 100%
+                confiável.</div>
+            </div>
+            <div class="value-card">
+              <div class="value-icon"><i class="fa-solid fa-handshake"></i></div>
+              <div class="value-title">Parceria</div>
+              <div class="value-desc">Suporte especializado e humano, feito por profissionais que realmente entendem a
+                sua rotina.</div>
+            </div>
+            <div class="value-card">
+              <div class="value-icon"><i class="fa-solid fa-rocket"></i></div>
+              <div class="value-title">Inovação</div>
+              <div class="value-desc">Sempre na fronteira tecnológica, entregando soluções ágeis, eficientes e de alto
+                desempenho.</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-sidebar">
+          <div class="team-card">
+            <div class="team-title">Viz Wise em números</div>
+            <div class="team-numbers">
+              <div class="team-number-item">
+                <span class="team-number-label">Anos no mercado</span>
+                <span class="team-number-value">11+</span>
+              </div>
+              <div class="team-number-item">
+                <span class="team-number-label">Cartórios atendidos</span>
+                <span class="team-number-value">500+</span>
+              </div>
+              <div class="team-number-item">
+                <span class="team-number-label">Estados cobertos</span>
+                <span class="team-number-value">5</span>
+              </div>
+              <div class="team-number-item">
+                <span class="team-number-label">Satisfação dos clientes</span>
+                <span class="team-number-value">98%</span>
+              </div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="team-title" style="padding:0 0 16px;border-bottom:1px solid var(--border);margin-bottom:8px;">
+              Nosso Compromisso</div>
+            <div class="cert-item">
+              <div class="cert-icon"><i class="fa-solid fa-check"></i></div>
+              <div>
+                <div class="cert-name">Tecnologia Proprietária</div>
+                <div class="cert-text">Desenvolvimento ágil e independente</div>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-icon"><i class="fa-solid fa-check"></i></div>
+              <div>
+                <div class="cert-name">Privacidade de Dados</div>
+                <div class="cert-text">Proteção rigorosa e infraestrutura blindada</div>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-icon"><i class="fa-solid fa-check"></i></div>
+              <div>
+                <div class="cert-name">Alta Disponibilidade</div>
+                <div class="cert-text">Sistemas em nuvem rápidos e estáveis</div>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-icon"><i class="fa-solid fa-check"></i></div>
+              <div>
+                <div class="cert-name">Atendimento Humanizado</div>
+                <div class="cert-text">Suporte técnico resolutivo e próximo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-logo">
+            <div class="logo-text"><img src="../images/logo.png" alt="logo_vizwise"></div>
+          </div>
+          <div class="footer-brand-desc">Tecnologia especializada para serventias extrajudiciais. Notas, Protesto e RCPN
+            com conformidade total e suporte especializado.</div>
+        </div>
+        <div>
+          <div class="footer-col-title">Sistemas</div>
+          <div class="footer-links">
+            <span class="footer-link" onclick="navigate('sistemas')">Sistema de Notas</span>
+            <span class="footer-link" onclick="navigate('sistemas')">Sistema de Protesto</span>
+            <span class="footer-link" onclick="navigate('sistemas')">Sistema RCPN</span>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Empresa</div>
+          <div class="footer-links">
+            <span class="footer-link" onclick="navigate('sobre')">Sobre a Viz Wise</span>
+            <span class="footer-link" onclick="navigate('como-funciona')">Como funciona</span>
+            <span class="footer-link" onclick="navigate('servicos')">Serviços</span>
+            <span class="footer-link" onclick="navigate('contato')">Contato</span>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Suporte</div>
+          <div class="footer-links">
+            <span class="footer-link">Central de ajuda</span>
+            <span class="footer-link">Documentação</span>
+            <span class="footer-link">Status do sistema</span>
+            <span class="footer-link" onclick="navigate('contato')">Falar com suporte</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2024 Viz Wise Sistemas. Todos os direitos reservados.</div>
+        <div class="footer-legal">
+          <a>Política de Privacidade</a>
+          <a>Termos de Uso</a>
+          <a>LGPD</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

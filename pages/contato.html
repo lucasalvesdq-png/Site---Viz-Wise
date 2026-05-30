@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Viz Wise</title>
+  <meta name="description" content="Entre em contato com a Viz Wise e solicite uma demonstração para seu cartório.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="navigate('home')" style="cursor:pointer;">
+        <div class="logo-text"><img src="../images/logo.png" alt="logo_vizwise"></div>
+      </div>
+      <div class="nav-links">
+        <span class="nav-link" onclick="navigate('home')" data-page="home">Home</span>
+        <span class="nav-link" onclick="navigate('sobre')" data-page="sobre">Sobre</span>
+        <span class="nav-link" onclick="navigate('sistemas')" data-page="sistemas">Sistemas</span>
+        <span class="nav-link" onclick="navigate('como-funciona')" data-page="como-funciona">Como Funciona</span>
+        <span class="nav-link" onclick="navigate('servicos')" data-page="servicos">Serviços</span>
+        <span class="nav-link active" onclick="navigate('contato')" data-page="contato">Contato</span>
+      </div>
+      <div class="nav-cta">
+        <button class="btn btn-ghost" onclick="navigate('contato')">Fale connosco</button>
+        <button class="btn btn-gold" onclick="navigate('contato')">Solicitar demo</button>
+      </div>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <span class="nav-link" onclick="navigate('home');toggleMenu()">Home</span>
+    <span class="nav-link" onclick="navigate('sobre');toggleMenu()">Sobre</span>
+    <span class="nav-link" onclick="navigate('sistemas');toggleMenu()">Sistemas</span>
+    <span class="nav-link" onclick="navigate('como-funciona');toggleMenu()">Como Funciona</span>
+    <span class="nav-link" onclick="navigate('planos');toggleMenu()">Planos</span>
+    <span class="nav-link" onclick="navigate('contato');toggleMenu()">Contato</span>
+    <div style="margin-top:24px;display:flex;flex-direction:column;gap:12px;">
+      <button class="btn btn-ghost" onclick="navigate('contato');toggleMenu()">Falar com consultor</button>
+      <button class="btn btn-gold" onclick="navigate('contato');toggleMenu()">Solicitar demo</button>
+    </div>
+  </div>
+
+  <section style="padding:140px 32px 100px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-label">Contato</div>
+          <h1 class="section-title">Fale com a nossa equipa</h1>
+          <p style="font-size:1rem;color:var(--text2);line-height:1.75;margin-bottom:40px;">A nossa equipa de
+            consultores especializados está pronta para entender a realidade do seu cartório e apresentar a solução
+            ideal.</p>
+          <div class="contact-channels">
+            <div class="contact-channel">
+              <div class="contact-channel-icon">📞</div>
+              <div>
+                <div class="contact-channel-label">Telefone</div>
+                <div class="contact-channel-value">(11) 3000-0000</div>
+              </div>
+            </div>
+            <div class="contact-channel">
+              <div class="contact-channel-icon">📧</div>
+              <div>
+                <div class="contact-channel-label">E-mail</div>
+                <div class="contact-channel-value">contato@vizwise.com.br</div>
+              </div>
+            </div>
+            <div class="contact-channel">
+              <div class="contact-channel-icon">💬</div>
+              <div>
+                <div class="contact-channel-label">WhatsApp</div>
+                <div class="contact-channel-value">(11) 99000-0000</div>
+              </div>
+            </div>
+            <div class="contact-channel">
+              <div class="contact-channel-icon">🕐</div>
+              <div>
+                <div class="contact-channel-label">Atendimento</div>
+                <div class="contact-channel-value">Segunda a sexta, 8h às 18h</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <div class="form-title">Solicite uma demonstração</div>
+          <div class="form-sub">Preencha o formulário e entraremos em contacto em até 24 horas.</div>
+          <form id="contactForm">
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label">Nome completo</label>
+                <input type="text" name="user_name" class="form-input" placeholder="Dr. João Silva" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Cargo</label>
+                <input type="text" name="user_cargo" class="form-input" placeholder="Tabelião / Oficial" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Nome do cartório</label>
+              <input type="text" name="cartorio" class="form-input" placeholder="1º Tabelionato de Notas de..."
+                required>
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label">E-mail</label>
+                <input type="email" name="user_email" class="form-input" placeholder="seu@cartorio.com.br" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Telefone / WhatsApp</label>
+                <input type="tel" name="user_tel" class="form-input" placeholder="(11) 99000-0000" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Sistema de interesse</label>
+              <select name="sistema" class="form-select form-input" required>
+                <option value="" style="background:var(--bg3)">Selecione...</option>
+                <option value="Sistema de Notas" style="background:var(--bg3)">Sistema de Notas</option>
+                <option value="Sistema de Protesto" style="background:var(--bg3)">Sistema de Protesto</option>
+                <option value="Sistema RCPN" style="background:var(--bg3)">Sistema RCPN</option>
+                <option value="Mais de um sistema" style="background:var(--bg3)">Mais de um sistema</option>
+                <option value="Não sei ainda" style="background:var(--bg3)">Não sei ainda</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Mensagem (opcional)</label>
+              <textarea name="message" class="form-textarea form-input"
+                placeholder="Conte sobre a realidade do seu cartório, volume de atos, sistema atual..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">Enviar solicitação</button>
+            <div class="form-note">Os seus dados são tratados com sigilo conforme a nossa política de privacidade e a
+              LGPD.</div>
+
+            <div class="success-msg" id="successMsg"
+              style="display: none; color: #4caf50; font-weight: 500; margin-top: 15px;">
+              ✓ Solicitação enviada com sucesso! Entraremos em contacto em até 24 horas.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-logo">
+            <div class="logo-text"><img src="../images/logo.png" alt="logo_vizwise"></div>
+          </div>
+          <div class="footer-brand-desc">Tecnologia especializada para serventias extrajudiciais. Notas, Protesto e RCPN
+            com conformidade total e suporte especializado.</div>
+        </div>
+        <div>
+          <div class="footer-col-title">Sistemas</div>
+          <div class="footer-links">
+            <span class="footer-link" onclick="navigate('sistemas')">Sistema de Notas</span>
+            <span class="footer-link" onclick="navigate('sistemas')">Sistema de Protesto</span>
+            <span class="footer-link" onclick="navigate('sistemas')">Sistema RCPN</span>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Empresa</div>
+          <div class="footer-links">
+            <span class="footer-link" onclick="navigate('sobre')">Sobre a Viz Wise</span>
+            <span class="footer-link" onclick="navigate('como-funciona')">Como funciona</span>
+            <span class="footer-link" onclick="navigate('planos')">Planos</span>
+            <span class="footer-link" onclick="navigate('contato')">Contato</span>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Suporte</div>
+          <div class="footer-links">
+            <span class="footer-link">Central de ajuda</span>
+            <span class="footer-link">Documentação</span>
+            <span class="footer-link">Status do sistema</span>
+            <span class="footer-link" onclick="navigate('contato')">Falar com suporte</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2024 Viz Wise Sistemas. Todos os direitos reservados.</div>
+        <div class="footer-legal">
+          <a>Política de Privacidade</a>
+          <a>Termos de Uso</a>
+          <a>LGPD</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="../js/email.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

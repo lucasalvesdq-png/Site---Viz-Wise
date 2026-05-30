@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viz Wise | Sistemas para Cartórios</title>
+  <meta name="description"
+    content="Plataforma de gestão para cartórios de Notas, Protesto e RCPN. Tecnologia que respeita a seriedade do seu trabalho.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="navigate('home')" style="cursor:pointer;">
+
+        <div class="logo-text"><img src="images/logo.png" alt="logo_vizwise"></div>
+      </div>
+      <div class="nav-links">
+        <span class="nav-link active" onclick="navigate('home')" data-page="home">Home</span>
+        <span class="nav-link" onclick="navigate('sobre')" data-page="sobre">Sobre</span>
+        <span class="nav-link" onclick="navigate('sistemas')" data-page="sistemas">Sistemas</span>
+        <span class="nav-link" onclick="navigate('como-funciona')" data-page="como-funciona">Como Funciona</span>
+        <span class="nav-link" onclick="navigate('servicos')" data-page="servicos">Serviços</span>
+        <span class="nav-link" onclick="navigate('contato')" data-page="contato">Contato</span>
+      </div>
+      <div class="nav-cta">
+        <button class="btn btn-ghost" onclick="navigate('contato')">Fale conosco</button>
+        <button class="btn btn-gold" onclick="navigate('contato')">Solicitar Apresentação</button>
+      </div>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <span class="nav-link" onclick="navigate('home');toggleMenu()">Home</span>
+    <span class="nav-link" onclick="navigate('sobre');toggleMenu()">Sobre</span>
+    <span class="nav-link" onclick="navigate('sistemas');toggleMenu()">Sistemas</span>
+    <span class="nav-link" onclick="navigate('como-funciona');toggleMenu()">Como Funciona</span>
+    <span class="nav-link" onclick="navigate('servicos');toggleMenu()">servicos</span>
+    <span class="nav-link" onclick="navigate('contato');toggleMenu()">Contato</span>
+    <div style="margin-top:24px;display:flex;flex-direction:column;gap:12px;">
+      <button class="btn btn-ghost" onclick="navigate('contato');toggleMenu()">Falar com consultor</button>
+      <button class="btn btn-gold" onclick="navigate('contato');toggleMenu()">Solicitar demo</button>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+      <div class="hero-glow2"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow">Tecnologia para cartórios</div>
+        <h1 class="hero-title">
+          Soluções de Alta Performance <br>para <em>Cartórios Extrajudiciais.</em>
+        </h1>
+        <p class="hero-sub">
+          Oferecemos sistemas robustos e soluções especializadas para otimizar processos, garantir segurança jurídica e
+          elevar o padrão de atendimento das serventias extrajudiciais.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-gold btn-lg" onclick="navigate('contato')">Fale com nossa equipe</button>
+          <button class="btn btn-ghost btn-lg" onclick="navigate('sistemas')">Ver sistemas</button>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-value">800+</div>
+            <div class="hero-stat-label">Cartórios atendidos</div>
+          </div>
+          <div>
+            <div class="hero-stat-value">98%</div>
+            <div class="hero-stat-label">Satisfação dos clientes</div>
+          </div>
+          <div>
+            <div class="hero-stat-value">10+</div>
+            <div class="hero-stat-label">Anos de mercado</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="dashboard-mock">
+          <div class="dash-header">
+            <div class="dash-dot" style="background:#ff5f57"></div>
+            <div class="dash-dot" style="background:#ffbd2e"></div>
+            <div class="dash-dot" style="background:#28c840"></div>
+            <div class="dash-title">Viz Wise — Painel de controle</div>
+          </div>
+          <div class="dash-body">
+            <div class="dash-cards">
+              <div class="dash-card">
+                <div class="dash-card-label">Protestos hoje</div>
+                <div class="dash-card-value">847</div>
+                <div class="dash-card-delta">▲ 12% vs ontem</div>
+              </div>
+              <div class="dash-card">
+                <div class="dash-card-label">Selos emitidos</div>
+                <div class="dash-card-value">1.240</div>
+                <div class="dash-card-delta">▲ 8% vs ontem</div>
+              </div>
+              <div class="dash-card">
+                <div class="dash-card-label">Atos lavrados</div>
+                <div class="dash-card-value">312</div>
+                <div class="dash-card-delta">▲ 5% vs semana</div>
+              </div>
+              <div class="dash-card">
+                <div class="dash-card-label">Receita do dia</div>
+                <div class="dash-card-value">R$ 48k</div>
+                <div class="dash-card-delta">▲ 18% vs média</div>
+              </div>
+            </div>
+            <div class="dash-chart">
+              <div style="font-size:0.65rem;color:var(--text3);margin-bottom:8px;">Movimentação — últimos 7 dias</div>
+              <div class="chart-bars">
+                <div class="chart-bar" style="height:45%"></div>
+                <div class="chart-bar" style="height:60%"></div>
+                <div class="chart-bar" style="height:40%"></div>
+                <div class="chart-bar" style="height:75%"></div>
+                <div class="chart-bar" style="height:55%"></div>
+                <div class="chart-bar active" style="height:85%"></div>
+                <div class="chart-bar" style="height:70%"></div>
+              </div>
+            </div>
+            <div class="dash-table">
+              <div class="dash-table-row" style="color:var(--text3);font-size:0.65rem;letter-spacing:0.06em;">
+                <span>TÍTULO</span><span>APRESENTANTE</span><span>VENCIMENTO</span><span>STATUS</span>
+              </div>
+              <div class="dash-table-row">
+                <span style="color:var(--text)">0012847</span><span>Banco Itaú</span><span>15/04</span>
+                <span class="dash-badge badge-green">Protestado</span>
+              </div>
+              <div class="dash-table-row">
+                <span style="color:var(--text)">0012848</span><span>Bradesco S.A.</span><span>15/04</span>
+                <span class="dash-badge badge-gold">Pendente</span>
+              </div>
+              <div class="dash-table-row">
+                <span style="color:var(--text)">0012849</span><span>Santander</span><span>14/04</span>
+                <span class="dash-badge badge-green">Protestado</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:40px 32px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div style="max-width:1200px;margin:0 auto;">
+      <p
+        style="text-align:center;font-size:0.75rem;color:var(--text3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:32px;">
+        Utilizado por cartórios em todo o Brasil</p>
+      <div style="display:flex;justify-content:center;gap:48px;flex-wrap:wrap;opacity:0.4;filter:grayscale(1);">
+        <div style="font-family:var(--font-display);font-size:1.1rem;color:var(--text2);">Bahia</div>
+        <div style="font-family:var(--font-display);font-size:1.1rem;color:var(--text2);">Minas Gerais</div>
+        <div style="font-family:var(--font-display);font-size:1.1rem;color:var(--text2);">Paraná</div>
+        <div style="font-family:var(--font-display);font-size:1.1rem;color:var(--text2);">Mato Grosso do Sul</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header center">
+        <div class="section-label">Nossas soluções</div>
+        <h2 class="section-title">Um sistema para cada especialidade</h2>
+        <p class="section-sub">Desenvolvidos especificamente para cada tipo de serventia, com aderência total às
+          normativas estaduais e federais.</p>
+      </div>
+      <div class="modules-grid">
+        <div class="module-card" onclick="navigate('sistemas')">
+          <div class="module-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+          <div class="module-title">Sistema de Notas</div>
+          <div class="module-desc">Gestão completa de atos notariais. Escrituras, procurações, reconhecimentos e todos
+            os livros exigidos pela corregedoria — integrado ao e-Notariado.</div>
+          <div class="module-link">Conheça o sistema →</div>
+        </div>
+        <div class="module-card" onclick="navigate('sistemas')">
+          <div class="module-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+          <div class="module-title">Sistema de Protesto</div>
+          <div class="module-desc">Controle total do fluxo de protestos. Recepção, intimação, protesto e retirada de
+            títulos com controle de selos e sequenciais.</div>
+          <div class="module-link">Conheça o sistema →</div>
+        </div>
+        <div class="module-card" onclick="navigate('sistemas')">
+          <div class="module-icon"><i class="fa-solid fa-folder-open"></i></div>
+          <div class="module-title">Sistema RCPN</div>
+          <div class="module-desc">Registro civil de pessoas naturais com indexação completa, emissão de certidões,
+            controle de livros e integração com a base nacional.</div>
+          <div class="module-link">Conheça o sistema →</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="features-layout">
+        <div>
+          <div class="section-label">Por que a Viz Wise</div>
+          <h2 class="section-title">Construído para a realidade cartorária</h2>
+          <p class="section-sub" style="margin-bottom:48px;">Não somos um sistema genérico adaptado. Cada funcionalidade
+            foi projetada pensando exatamente na dor dos nossos clientes.</p>
+          <div class="features-list">
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-lock"></i></div>
+              <div>
+                <div class="feature-title">Conformidade total com CNJ</div>
+                <div class="feature-desc">Atualizações automáticas para manter seu cartório sempre em conformidade com
+                  as normativas do Conselho Nacional de Justiça.</div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-link"></i></div>
+              <div>
+                <div class="feature-title">Integração com e-Notariado</div>
+                <div class="feature-desc">Conexão nativa com a plataforma do CFN para atos digitais, videoconferência e
+                  assinatura eletrônica avançada.</div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-chart-column"></i></div>
+              <div>
+                <div class="feature-title">Relatórios e gestão financeira</div>
+                <div class="feature-desc">Dashboards gerenciais, emolumentos automáticos conforme tabela estadual e
+                  conciliação financeira integrada.</div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <div>
+                <div class="feature-title">Suporte especializado</div>
+                <div class="feature-desc">Equipe com formação jurídica e experiência cartorária. Atendimento por
+                  profissionais que entendem sua operação.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="features-visual">
+          <img fetchpriority="high" decoding="async" width="435" height="469" src="./images/img.png"
+            sizes="(max-width: 435px) 100vw, 435px" style="width:100%;height:107.82%;max-width:435px">
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="section"
+    style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="section-inner">
+      <div class="section-header center">
+        <div class="section-label">Depoimentos</div>
+        <h2 class="section-title">O que dizem os tabeliães</h2>
+      </div>
+      <div class="testimonials">
+        <div class="testimonial">
+          <div class="testimonial-quote">O sistema de protesto da Viz Wise transformou nossa operação. Reduzimos o tempo
+            de processamento em 60% e praticamente eliminamos os erros de sequencial de selos.</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DR</div>
+            <div>
+              <div class="testimonial-name">Dr. Ricardo Almeida</div>
+              <div class="testimonial-role">Tabelião — 3º Protesto de São Paulo</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-quote">Finalmente um sistema que entende a rotina de um cartório de notas. A
+            integração com o e-Notariado é impecável e o suporte resolve qualquer questão em minutos.</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DM</div>
+            <div>
+              <div class="testimonial-name">Dra. Mariana Fonseca</div>
+              <div class="testimonial-role">Tabeliã — 1º Notas de Curitiba</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-quote">Usamos a Viz Wise há 8 anos. O sistema evoluiu junto com a legislação e nunca
+            nos deixou na mão em nenhuma corregedoria ou auditoria.</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">CE</div>
+            <div>
+              <div class="testimonial-name">Dr. Carlos Esteves</div>
+              <div class="testimonial-role">Oficial — RCPN do Rio de Janeiro</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="cta-banner">
+        <h2 class="cta-banner-title">Pronto para modernizar sua serventia?</h2>
+        <p class="cta-banner-sub">Agende uma demonstração e veja como a Viz Wise se adapta à realidade do seu cartório.
+        </p>
+        <div class="cta-banner-actions">
+          <button class="btn btn-gold btn-lg" onclick="navigate('contato')">Solicitar apresentação gratuita</button>
+          <button class="btn btn-ghost btn-lg" onclick="navigate('sistemas')">Ver Sistemas</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-logo">
+            <img src="images/logo.png" alt="logo_vizwise">
+          </div>
+          <div class="footer-brand-desc">Tecnologia especializada para serventias extrajudiciais. Notas, Protesto e RCPN
+            com conformidade total e suporte especializado.</div>
+        </div>
+        <div>
+          <div class="footer-col-title">Sistemas</div>
+          <div class="footer-links">
+            <span class="footer-link" onclick="navigate('sistemas')">Sistema de Notas</span>
+            <span class="footer-link" onclick="navigate('sistemas')">Sistema de Protesto</span>
+            <span class="footer-link" onclick="navigate('sistemas')">Sistema RCPN</span>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Empresa</div>
+          <div class="footer-links">
+            <span class="footer-link" onclick="navigate('sobre')">Sobre a Viz Wise</span>
+            <span class="footer-link" onclick="navigate('como-funciona')">Como funciona</span>
+            <span class="footer-link" onclick="navigate('servicos')">Serviços</span>
+            <span class="footer-link" onclick="navigate('contato')">Contato</span>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Suporte</div>
+          <div class="footer-links">
+            <span class="footer-link">Central de ajuda</span>
+            <span class="footer-link">Documentação</span>
+            <span class="footer-link">Status do sistema</span>
+            <span class="footer-link" onclick="navigate('contato')">Falar com suporte</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2026 Viz Wise Sistemas. Todos os direitos reservados.</div>
+        <div class="footer-legal">
+          <a>Política de Privacidade</a>
+          <a>Termos de Uso</a>
+          <a>LGPD</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como Funciona | Viz Wise</title>
+  <meta name="description" content="Entenda o processo de implantação e como a Viz Wise funciona no seu cartório.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="navigate('home')" style="cursor:pointer;">
+        <div class="logo-text"><img src="../images/logo.png" alt="logo_vizwise"></div>
+      </div>
+      <div class="nav-links">
+        <span class="nav-link" onclick="navigate('home')" data-page="home">Home</span>
+        <span class="nav-link" onclick="navigate('sobre')" data-page="sobre">Sobre</span>
+        <span class="nav-link" onclick="navigate('sistemas')" data-page="sistemas">Sistemas</span>
+        <span class="nav-link active" onclick="navigate('como-funciona')" data-page="como-funciona">Como Funciona</span>
+        <span class="nav-link" onclick="navigate('servicos')" data-page="servicos">Serviços</span>
+        <span class="nav-link" onclick="navigate('contato')" data-page="contato">Contato</span>
+      </div>
+      <div class="nav-cta">
+        <button class="btn btn-ghost" onclick="navigate('contato')">Falar com consultor</button>
+        <button class="btn btn-gold" onclick="navigate('contato')">Solicitar demo</button>
+      </div>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <span class="nav-link" onclick="navigate('home');toggleMenu()">Home</span>
+    <span class="nav-link" onclick="navigate('sobre');toggleMenu()">Sobre</span>
+    <span class="nav-link" onclick="navigate('sistemas');toggleMenu()">Sistemas</span>
+    <span class="nav-link" onclick="navigate('como-funciona');toggleMenu()">Como Funciona</span>
+    <span class="nav-link" onclick="navigate('servicos');toggleMenu()">servicos</span>
+    <span class="nav-link" onclick="navigate('contato');toggleMenu()">Contato</span>
+    <div style="margin-top:24px;display:flex;flex-direction:column;gap:12px;">
+      <button class="btn btn-ghost" onclick="navigate('contato');toggleMenu()">Fale conosco</button>
+      <button class="btn btn-gold" onclick="navigate('contato');toggleMenu()">Solicitar demo</button>
+    </div>
+  </div>
+
+  <section style="padding:140px 32px 100px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="section-header center" style="margin-bottom:80px;">
+        <div class="section-label">Processo</div>
+        <h1 class="section-title">Da contratação ao pleno funcionamento</h1>
+        <p class="section-sub">Um processo estruturado para garantir que seu cartório esteja operando com a Viz Wise com
+          segurança e sem interrupção.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-title">Consulta e proposta</div>
+          <div class="step-desc">Nossa equipe avalia o perfil da sua serventia, volume de atos e necessidades
+            específicas para apresentar a proposta ideal.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-title">Migração de dados</div>
+          <div class="step-desc">Importamos todo o histórico do seu sistema atual sem perda de informações. Nossa equipe
+            cuida de toda a conversão técnica.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-title">Implantação e treinamento</div>
+          <div class="step-desc">Implantação presencial ou remota com treinamento completo para toda a equipe do
+            cartório — tabeliões, escreventes e auxiliares.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div class="step-title">Suporte contínuo</div>
+          <div class="step-desc">Suporte especializado com profissionais que entendem de cartórios. Atualizações
+            automáticas e melhorias contínuas sem custo adicional.</div>
+        </div>
+      </div>
+
+      <div style="margin-top:80px;">
+        <div class="section-header center" style="margin-bottom:48px;">
+          <h2 class="section-title" style="font-size:2rem;">Perguntas frequentes</h2>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px;max-width:800px;margin:0 auto;">
+          <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:24px;">
+            <div style="font-size:0.95rem;font-weight:500;color:var(--text);margin-bottom:10px;">Quanto tempo leva a
+              implantação?</div>
+            <div style="font-size:0.875rem;color:var(--text2);line-height:1.7;">A implantação padrão leva entre 5 e 15
+              dias úteis, dependendo da complexidade da migração de dados. Cartórios com grande volume histórico podem
+              levar um pouco mais.</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:24px;">
+            <div style="font-size:0.95rem;font-weight:500;color:var(--text);margin-bottom:10px;">Os dados do sistema
+              anterior são preservados?</div>
+            <div style="font-size:0.875rem;color:var(--text2);line-height:1.7;">Sim. Nossa equipe realiza a migração
+              completa do histórico de atos, índices e dados cadastrais. Trabalhamos com os principais sistemas do
+              mercado.</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:24px;">
+            <div style="font-size:0.95rem;font-weight:500;color:var(--text);margin-bottom:10px;">Como é feita a
+              segurança e o backup dos dados?</div>
+            <div style="font-size:0.875rem;color:var(--text2);line-height:1.7;">Utilizamos servidores em nuvem de alta
+              disponibilidade com rotinas de backup automáticas e criptografia avançada, garantindo que as informações
+              estejam sempre seguras e protegidas contra perdas.</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:24px;">
+            <div style="font-size:0.95rem;font-weight:500;color:var(--text);margin-bottom:10px;">O sistema recebe
+              melhorias e novas funcionalidades?</div>
+            <div style="font-size:0.875rem;color:var(--text2);line-height:1.7;">Sim! Evoluímos a plataforma
+              continuamente. As atualizações de segurança e as novas ferramentas são aplicadas de forma automática e
+              transparente, sem interromper a sua operação ou gerar custos extras.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-logo">
+            <div class="logo-mark">
+              <svg viewBox="0 0 20 20" style="width:18px;height:18px;fill:var(--bg)">
+                <path d="M10 2L3 7v6l7 5 7-5V7L10 2zm0 2.5L15 8v4l-5 3.5L5 12V8l5-3.5z" />
+              </svg>
+            </div>
+            <div class="logo-text">Viz<span>Wise</span></div>
+          </div>
+          <div class="footer-brand-desc">Tecnologia especializada para serventias extrajudiciais. Notas, Protesto e RCPN
+            com conformidade total e suporte especializado.</div>
+        </div>
+        <div>
+          <div class="footer-col-title">Sistemas</div>
+          <div class="footer-links">
+            <span class="footer-link" onclick="navigate('sistemas')">Sistema de Notas</span>
+            <span class="footer-link" onclick="navigate('sistemas')">Sistema de Protesto</span>
+            <span class="footer-link" onclick="navigate('sistemas')">Sistema RCPN</span>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Empresa</div>
+          <div class="footer-links">
+            <span class="footer-link" onclick="navigate('sobre')">Sobre a Viz Wise</span>
+            <span class="footer-link" onclick="navigate('como-funciona')">Como funciona</span>
+            <span class="footer-link" onclick="navigate('servicos')">Serviços</span>
+            <span class="footer-link" onclick="navigate('contato')">Contato</span>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Suporte</div>
+          <div class="footer-links">
+            <span class="footer-link">Central de ajuda</span>
+            <span class="footer-link">Documentação</span>
+            <span class="footer-link">Status do sistema</span>
+            <span class="footer-link" onclick="navigate('contato')">Falar com suporte</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2024 Viz Wise Sistemas. Todos os direitos reservados.</div>
+        <div class="footer-legal">
+          <a>Política de Privacidade</a>
+          <a>Termos de Uso</a>
+          <a>LGPD</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
